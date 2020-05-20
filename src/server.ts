@@ -5,8 +5,12 @@ import routes from './routes';
 
 const app = express();
 
-function logRequest(request: Request, response: Response, next: NextFunction): void {
-  const log: string = `[${request.method.toUpperCase()}] ${request.url}`;
+function logRequest(
+  request: Request,
+  response: Response,
+  next: NextFunction,
+): void {
+  const log = `[${request.method.toUpperCase()}] ${request.url}`;
 
   console.time(log);
   next();
