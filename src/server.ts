@@ -7,7 +7,7 @@ function logRequest(request: Request, response: Response, next: NextFunction): v
 
   const log: string = `[${method.toUpperCase()}] ${url}`;
 
-  console.time(log)
+  console.time(log);
 
   next();
 
@@ -19,4 +19,4 @@ app.use(logRequest);
 
 app.get('/', (request, response) => response.send('hello baby'));
 
-app.listen(3333, () => console.log('🚀 Server is Running on port:3333'))
+app.listen(3333, () => console.log('🚀 Server is Running on port:3333'));
