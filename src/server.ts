@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express from 'express';
 
 import logRequest from './utils/logRequest';
 import routes from './routes';
