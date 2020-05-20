@@ -6,7 +6,7 @@ function logRequest(request: Request, response: Response, next: NextFunction): v
   const { method, url } = request;
 
   const log: string = `[${method.toUpperCase()}] ${url}`;
-  
+
   console.time(log)
 
   next();
